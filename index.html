@@ -1,37 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagu.tech</title>
-    <!-- Tailwind CSS for styling -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetStudin - Master Your Subjects with Engaging Quizzes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #F0F4F8;
+            background-image: radial-gradient(#DDE4EA 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background-color: #ffffff;
+        }
     </style>
-  </head>
-  <body class="bg-gray-900 text-white">
-    <!-- Main container to center the content -->
-    <div class="flex flex-col items-center justify-center min-h-screen p-4">
-      <!-- Large Image -->
-      <!-- Using a placeholder image from placehold.co. You can replace the src with your own image URL. -->
-      <div class="mb-8 shadow-2xl rounded-lg overflow-hidden">
-        <img
-          src="https://placehold.co/800x600/1a202c/ffffff?text=Image"
-          alt="Large display image"
-          class="w-full h-auto max-w-2xl object-cover"
-          onerror="this.onerror=null;this.src='https://placehold.co/800x600/ff0000/ffffff?text=Image+Not+Found';"
-        />
-      </div>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-      <!-- Bold Text -->
-      <h1 class="text-5xl md:text-6xl font-bold tracking-wider">pagu.tech</h1>
-    </div>
-  </body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">GetStudin</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-blue-600">Features</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600">Testimonials</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a>
+            </nav>
+            <a href="#pricing" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md hover:bg-blue-700">
+                Subscribe Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-bg">
+        <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Unlock Your Potential. Ace Every Test.
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    GetStudin is the ultimate quiz platform designed to help you master any subject. With unlimited quizzes and expert-verified content, achieving academic excellence is closer than you think.
+                </p>
+                <a href="#pricing" class="cta-button inline-block bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-xl hover:bg-blue-700">
+                    Get Started for Just $20/Month
+                </a>
+                <p class="text-sm text-gray-500 mt-4">Full access. Cancel anytime.</p>
+            </div>
+            <div class="mt-12">
+                <img src="https://placehold.co/800x450/E0E7FF/4F46E5?text=GetStudin+App+in+Action" alt="GetStudin App Screenshot" class="mx-auto rounded-xl shadow-2xl border-4 border-white">
+            </div>
+        </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Why Students Love GetStudin</h3>
+                <p class="text-gray-600 mt-2">Everything you need to succeed in one place.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m-5.747-8.994l11.494 0M4.253 12h15.494"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Unlimited Quizzes</h4>
+                    <p class="text-gray-600">Access our vast library of quizzes on any subject, from math to history. New content added weekly!</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Expert-Verified Content</h4>
+                    <p class="text-gray-600">Our quizzes are created and vetted by certified educators and subject matter experts for accuracy and relevance.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="bg-blue-100 text-blue-600 rounded-full h-12 w-12 flex items-center justify-center mb-4">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Instant Feedback</h4>
+                    <p class="text-gray-600">Understand your mistakes with detailed explanations for every question, helping you learn and improve faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-lg mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Simple, Transparent Pricing</h3>
+                <p class="text-gray-600 mt-2 mb-8">Choose the plan that's right for you. Oh wait, we made it simple.</p>
+            </div>
+            <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="p-8">
+                    <h4 class="text-2xl font-bold text-gray-900 text-center">GetStudin Pro</h4>
+                    <p class="text-center text-gray-500 mt-2">All-access pass to academic success</p>
+                    <div class="text-center my-8">
+                        <span class="text-5xl font-extrabold text-gray-900">$20</span>
+                        <span class="text-xl font-medium text-gray-500">/month</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Unlimited access to all quizzes
+                        </li>
+                        <li class="flex items-center">
+                             <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Expert-created content
+                        </li>
+                        <li class="flex items-center">
+                             <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Detailed performance tracking
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Cancel your subscription anytime
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-gray-50">
+                    <a href="#" class="cta-button block w-full bg-blue-600 text-white text-center font-bold py-4 rounded-lg shadow-lg hover:bg-blue-700">
+                        Start Learning Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Don't Just Take Our Word For It</h3>
+                <p class="text-gray-600 mt-2">See what students and educators are saying about us.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"GetStudin has been a game-changer for my study routine. The detailed feedback helped me understand complex topics I used to struggle with. My grades have never been better!"</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/E0E7FF/4F46E5?text=AV" alt="Avatar of Sarah L.">
+                        <div>
+                            <p class="font-bold">Sarah L.</p>
+                            <p class="text-sm text-gray-500">University Student</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"I recommend GetStudin to all my students. It's an engaging way to reinforce what we learn in class. The content is top-notch and aligns perfectly with our curriculum."</p>
+                    <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/FFE4E6/DC2626?text=AV" alt="Avatar of David Chen">
+                        <div>
+                            <p class="font-bold">David Chen</p>
+                            <p class="text-sm text-gray-500">High School Teacher</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4">"For just $20 a month, the value is incredible. It's like having a personal tutor available 24/7. The best investment I've made in my education."</p>
+                     <div class="flex items-center">
+                        <img class="w-12 h-12 rounded-full mr-4" src="https://placehold.co/100x100/D1FAE5/059669?text=AV" alt="Avatar of Maria G.">
+                        <div>
+                            <p class="font-bold">Maria G.</p>
+                            <p class="text-sm text-gray-500">College Freshman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Frequently Asked Questions</h3>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+                    <h5 class="font-bold text-lg mb-2">What subjects are covered?</h5>
+                    <p class="text-gray-600">We offer a wide range of subjects including Math, Science, History, English, and more. Our library is constantly expanding to cover more topics and academic levels.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+                    <h5 class="font-bold text-lg mb-2">Can I cancel my subscription?</h5>
+                    <p class="text-gray-600">Absolutely. You can cancel your $20/month subscription at any time through your account settings. No questions asked.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+                    <h5 class="font-bold text-lg mb-2">Is there a mobile app?</h5>
+                    <p class="text-gray-600">Yes! GetStudin is available on both iOS and Android, so you can study anytime, anywhere. Your progress is synced across all your devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 GetStudin. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
